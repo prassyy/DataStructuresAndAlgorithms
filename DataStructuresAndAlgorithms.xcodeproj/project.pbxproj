@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		338C21B824DFDC960083447A /* DataStructuresAndAlgorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C21AE24DFDC960083447A /* DataStructuresAndAlgorithms.framework */; };
-		338C21BD24DFDC960083447A /* DataStructuresAndAlgorithmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C21BC24DFDC960083447A /* DataStructuresAndAlgorithmsTests.swift */; };
-		338C21BF24DFDC960083447A /* DataStructuresAndAlgorithms.h in Headers */ = {isa = PBXBuildFile; fileRef = 338C21B124DFDC960083447A /* DataStructuresAndAlgorithms.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33A4058924E1AC99008706DA /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4058824E1AC99008706DA /* BubbleSort.swift */; };
+		33A4058D24E1ADDE008706DA /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4058B24E1ADD9008706DA /* ArrayTests.swift */; };
+		33A4058E24E1B159008706DA /* DataStructuresAndAlgorithmsTests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 338C21BE24DFDC960083447A /* DataStructuresAndAlgorithmsTests.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +25,11 @@
 
 /* Begin PBXFileReference section */
 		338C21AE24DFDC960083447A /* DataStructuresAndAlgorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataStructuresAndAlgorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		338C21B124DFDC960083447A /* DataStructuresAndAlgorithms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStructuresAndAlgorithms.h; sourceTree = "<group>"; };
-		338C21B224DFDC960083447A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338C21B224DFDC960083447A /* DataStructuresAndAlgorithms.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataStructuresAndAlgorithms.plist; sourceTree = "<group>"; };
 		338C21B724DFDC960083447A /* DataStructuresAndAlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructuresAndAlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		338C21BC24DFDC960083447A /* DataStructuresAndAlgorithmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructuresAndAlgorithmsTests.swift; sourceTree = "<group>"; };
-		338C21BE24DFDC960083447A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338C21BE24DFDC960083447A /* DataStructuresAndAlgorithmsTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = DataStructuresAndAlgorithmsTests.plist; path = DataStructuresAndAlgorithms/Configs/DataStructuresAndAlgorithmsTests.plist; sourceTree = SOURCE_ROOT; };
+		33A4058824E1AC99008706DA /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
+		33A4058B24E1ADD9008706DA /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				338C21B024DFDC960083447A /* DataStructuresAndAlgorithms */,
-				338C21BB24DFDC960083447A /* DataStructuresAndAlgorithmsTests */,
 				338C21AF24DFDC960083447A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,19 +71,92 @@
 		338C21B024DFDC960083447A /* DataStructuresAndAlgorithms */ = {
 			isa = PBXGroup;
 			children = (
-				338C21B124DFDC960083447A /* DataStructuresAndAlgorithms.h */,
-				338C21B224DFDC960083447A /* Info.plist */,
+				33A4058724E1ABAD008706DA /* HashTables */,
+				33A4058624DFF37A008706DA /* Graphs */,
+				33A4058524DFF373008706DA /* Tries */,
+				33A4058324DFF362008706DA /* Trees */,
+				33A4058224DFF35C008706DA /* Queues */,
+				33A4058124DFF355008706DA /* Stacks */,
+				33A4058024DFF347008706DA /* LinkedLists */,
+				33A4057F24DFF32E008706DA /* Arrays */,
+				338C21C824DFDF320083447A /* Configs */,
 			);
 			path = DataStructuresAndAlgorithms;
 			sourceTree = "<group>";
 		};
-		338C21BB24DFDC960083447A /* DataStructuresAndAlgorithmsTests */ = {
+		338C21C824DFDF320083447A /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				338C21BC24DFDC960083447A /* DataStructuresAndAlgorithmsTests.swift */,
-				338C21BE24DFDC960083447A /* Info.plist */,
+				338C21B224DFDC960083447A /* DataStructuresAndAlgorithms.plist */,
+				338C21BE24DFDC960083447A /* DataStructuresAndAlgorithmsTests.plist */,
 			);
-			path = DataStructuresAndAlgorithmsTests;
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		33A4057F24DFF32E008706DA /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				33A4058A24E1ADBE008706DA /* Tests */,
+				33A4058824E1AC99008706DA /* BubbleSort.swift */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
+		33A4058024DFF347008706DA /* LinkedLists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LinkedLists;
+			sourceTree = "<group>";
+		};
+		33A4058124DFF355008706DA /* Stacks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stacks;
+			sourceTree = "<group>";
+		};
+		33A4058224DFF35C008706DA /* Queues */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Queues;
+			sourceTree = "<group>";
+		};
+		33A4058324DFF362008706DA /* Trees */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Trees;
+			sourceTree = "<group>";
+		};
+		33A4058524DFF373008706DA /* Tries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tries;
+			sourceTree = "<group>";
+		};
+		33A4058624DFF37A008706DA /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
+		33A4058724E1ABAD008706DA /* HashTables */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HashTables;
+			sourceTree = "<group>";
+		};
+		33A4058A24E1ADBE008706DA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				33A4058B24E1ADD9008706DA /* ArrayTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +166,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338C21BF24DFDC960083447A /* DataStructuresAndAlgorithms.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +220,7 @@
 				TargetAttributes = {
 					338C21AD24DFDC960083447A = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					338C21B624DFDC960083447A = {
 						CreatedOnToolsVersion = 11.6;
@@ -185,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A4058E24E1B159008706DA /* DataStructuresAndAlgorithmsTests.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A4058924E1AC99008706DA /* BubbleSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338C21BD24DFDC960083447A /* DataStructuresAndAlgorithmsTests.swift in Sources */,
+				33A4058D24E1ADDE008706DA /* ArrayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,12 +415,13 @@
 		338C21C324DFDC960083447A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DataStructuresAndAlgorithms/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DataStructuresAndAlgorithms/Configs/DataStructuresAndAlgorithms.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -355,6 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prassyy.DataStructuresAndAlgorithms;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,12 +440,13 @@
 		338C21C424DFDC960083447A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DataStructuresAndAlgorithms/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DataStructuresAndAlgorithms/Configs/DataStructuresAndAlgorithms.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,8 +464,9 @@
 		338C21C624DFDC960083447A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DataStructuresAndAlgorithmsTests/Info.plist;
+				INFOPLIST_FILE = DataStructuresAndAlgorithms/Configs/DataStructuresAndAlgorithmsTests.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,8 +482,9 @@
 		338C21C724DFDC960083447A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DataStructuresAndAlgorithmsTests/Info.plist;
+				INFOPLIST_FILE = DataStructuresAndAlgorithms/Configs/DataStructuresAndAlgorithmsTests.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
