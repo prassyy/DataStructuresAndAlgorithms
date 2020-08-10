@@ -10,6 +10,7 @@ import Foundation
 
 extension Array where Element: Comparable {
     public func bubbleSort() -> Array<Element> {
+        guard count > 0 else { return self }
         var output = self
         var exchanges: Int = 1
         while exchanges > 0 {
