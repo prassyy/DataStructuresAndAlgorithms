@@ -24,4 +24,11 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual([100].selectionSort(), [100])
         XCTAssertEqual([1,9].selectionSort(), [1,9])
     }
+    
+    func testInsertionSort() {
+        XCTAssertEqual([1,9,3,7,8,45,87,12,76].insertionSort(), [1,3,7,8,9,12,45,76,87])
+        XCTAssertEqual(Array<Int>([]).insertionSort(), [])
+        XCTAssertEqual([100].insertionSort(), [100])
+        XCTAssertEqual([1,9].insertionSort(), [1,9])
+    }
 }

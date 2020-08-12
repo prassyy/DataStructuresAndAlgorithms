@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		331E110324E1C2290030F778 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E110224E1C2290030F778 /* SelectionSort.swift */; };
+		331E114124E31C180030F778 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E114024E31C180030F778 /* InsertionSort.swift */; };
 		338C21B824DFDC960083447A /* DataStructuresAndAlgorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C21AE24DFDC960083447A /* DataStructuresAndAlgorithms.framework */; };
 		33A4058924E1AC99008706DA /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4058824E1AC99008706DA /* BubbleSort.swift */; };
 		33A4058D24E1ADDE008706DA /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4058B24E1ADD9008706DA /* ArrayTests.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		331E110224E1C2290030F778 /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
+		331E114024E31C180030F778 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
 		338C21AE24DFDC960083447A /* DataStructuresAndAlgorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataStructuresAndAlgorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		338C21B224DFDC960083447A /* DataStructuresAndAlgorithms.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataStructuresAndAlgorithms.plist; sourceTree = "<group>"; };
 		338C21B724DFDC960083447A /* DataStructuresAndAlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructuresAndAlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 				33A4058A24E1ADBE008706DA /* Tests */,
 				33A4058824E1AC99008706DA /* BubbleSort.swift */,
 				331E110224E1C2290030F778 /* SelectionSort.swift */,
+				331E114024E31C180030F778 /* InsertionSort.swift */,
 			);
 			path = Arrays;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331E114124E31C180030F778 /* InsertionSort.swift in Sources */,
 				331E110324E1C2290030F778 /* SelectionSort.swift in Sources */,
 				33A4058924E1AC99008706DA /* BubbleSort.swift in Sources */,
 			);
