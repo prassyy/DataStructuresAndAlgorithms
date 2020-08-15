@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array where Element: Comparable {
-    public func selectionSort() -> Array<Element> {
+    public func selectionSort() -> [Element] {
         guard count > 0 else { return self }
         var output = self
         for i in 0..<count {
@@ -20,9 +20,7 @@ extension Array where Element: Comparable {
                 }
             }
             if minValueIndex != i {
-                let temp = output[i]
-                output[i] = output[minValueIndex]
-                output[minValueIndex] = temp
+                output.swap(i, minValueIndex)
             }
         }
         return output

@@ -9,16 +9,22 @@
 import Foundation
 
 extension Array where Element: Comparable {
-    public func insertionSort() -> Array<Element> {
+    public func insertionSort() -> [Element] {
         guard count > 0 else { return self }
         var output = self
         for i in 1..<count {
             let valueToInsert = output[i]
-            var j = 0; while valueToInsert > output[j] { j += 1 }
-            var rotateIndex = i; repeat {
+            
+            var j = 0
+            while valueToInsert > output[j], j < i {
+                j += 1
+            }
+            
+            var rotateIndex = i
+            while rotateIndex > j {
                 output[rotateIndex] = output[rotateIndex-1]
                 rotateIndex -= 1
-            } while rotateIndex > j
+            }
             output[j] = valueToInsert
         }
         return output

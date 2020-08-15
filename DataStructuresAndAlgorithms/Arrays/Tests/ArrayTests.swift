@@ -38,4 +38,11 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual([100].mergeSort(), [100])
         XCTAssertEqual([1,9].mergeSort(), [1,9])
     }
+    
+    func testQuickSort() {
+        XCTAssertEqual([1,9,3,7,8,45,87,12,76].quickSort(), [1,3,7,8,9,12,45,76,87])
+        XCTAssertEqual(Array<Int>([]).quickSort(), [])
+        XCTAssertEqual([100].quickSort(), [100])
+        XCTAssertEqual([1,9].quickSort(), [1,9])
+    }
 }

@@ -10,14 +10,15 @@ import Foundation
 
 extension Array where Element: Comparable {
     
-    public func mergeSort() -> Array<Element> {
+    public func mergeSort() -> [Element] {
         guard count > 2 else { return self }
-        let leftSubArray = Array(self[0..<count/2])
-        let rightSubArray = Array(self[count/2..<count])
-        return merge(leftSubArray.mergeSort(), rightSubArray.mergeSort())
+        
+        var leftSortedArray = Array(self[0..<count/2]).mergeSort()
+        var rightSortedArray = Array(self[count/2..<count]).mergeSort()
+        return merge(&leftSortedArray, &rightSortedArray)
     }
     
-    func merge(_ leftSubArray: Array<Element>, _ rightSubArray: Array<Element>) -> Array<Element> {
+    func merge(_ leftSubArray: inout [Element], _ rightSubArray: inout [Element]) -> [Element] {
         var i=0, j=0
 
         var output = [Element]()
@@ -42,7 +43,6 @@ extension Array where Element: Comparable {
             output.append(leftSubArray[i])
             i += 1
         }
-        
         while j < rightSubArray.count {
             output.append(rightSubArray[j])
             j += 1
