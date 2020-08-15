@@ -19,19 +19,35 @@ extension Array where Element: Comparable {
     
     func merge(_ leftSubArray: Array<Element>, _ rightSubArray: Array<Element>) -> Array<Element> {
         var i=0, j=0
+
         var output = [Element]()
+        output.reserveCapacity(leftSubArray.count + rightSubArray.count)
+
         while i < leftSubArray.count && j < rightSubArray.count {
             if leftSubArray[i] < rightSubArray[j] {
                 output.append(leftSubArray[i])
-                i += 1;
-            } else {
+                i += 1
+            } else if rightSubArray[j] < leftSubArray[i] {
                 output.append(rightSubArray[j])
-                j += 1;
+                j += 1
+            } else {
+                output.append(leftSubArray[i])
+                i += 1
+                output.append(rightSubArray[j])
+                j += 1
             }
         }
-        output.append(contentsOf: i >= leftSubArray.count
-                ? rightSubArray[j..<rightSubArray.count]
-                : leftSubArray[i..<leftSubArray.count])
+
+        while i < leftSubArray.count {
+            output.append(leftSubArray[i])
+            i += 1
+        }
+        
+        while j < rightSubArray.count {
+            output.append(rightSubArray[j])
+            j += 1
+        }
+
         return output
     }
 }
