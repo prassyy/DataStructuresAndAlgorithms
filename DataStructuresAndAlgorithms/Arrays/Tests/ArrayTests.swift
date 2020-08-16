@@ -59,4 +59,11 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual(radixSort([100]), [100])
         XCTAssertEqual(radixSort([1,9]), [1,9])
     }
+    
+    func testHeapSort() {
+        XCTAssertEqual(HeapSort([1,9,3,7,8,45,87,12,76]).sort(), [1,3,7,8,9,12,45,76,87])
+        XCTAssertEqual(HeapSort<Int>([]).sort(), [])
+        XCTAssertEqual(HeapSort([100]).sort(), [100])
+        XCTAssertEqual(HeapSort([1,9]).sort(), [1,9])
+    }
 }
