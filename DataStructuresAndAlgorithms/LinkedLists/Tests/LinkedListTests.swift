@@ -70,4 +70,24 @@ class LinkedListTests: XCTestCase {
         XCTAssertEqual(list.get(at: 2), 3)
         XCTAssertEqual(list.length(), 3)
     }
+    
+    func testLinkedListReverse() {
+        let list = LinkedList()
+        list.append(data: 1); list.append(data: 2); list.append(data: 3)
+        XCTAssertEqual(list.printList(), "1 2 3")
+        XCTAssertEqual(list.length(), 3)
+        list.reverse()
+        XCTAssertEqual(list.printList(), "3 2 1")
+        XCTAssertEqual(list.length(), 3)
+    }
+    
+    func testLinkedListReverseRecursively() {
+        let list = LinkedList()
+        list.append(data: 1); list.append(data: 2); list.append(data: 3)
+        XCTAssertEqual(list.printList(), "1 2 3")
+        XCTAssertEqual(list.length(), 3)
+        list.recursiveReverse()
+        XCTAssertEqual(list.printList(), "3 2 1")
+        XCTAssertEqual(list.length(), 3)
+    }
 }
