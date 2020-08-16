@@ -45,4 +45,18 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual([100].quickSort(), [100])
         XCTAssertEqual([1,9].quickSort(), [1,9])
     }
+    
+    func testCountingSort() {
+        XCTAssertEqual(countingSort([1,9,3,7,8,45,87,12,76]), [1,3,7,8,9,12,45,76,87])
+        XCTAssertEqual(countingSort([]), [])
+        XCTAssertEqual(countingSort([100]), [100])
+        XCTAssertEqual(countingSort([1,9]), [1,9])
+    }
+    
+    func testRadixSort() {
+        XCTAssertEqual(radixSort([1,9,3,7,8,45,87,12,76]), [1,3,7,8,9,12,45,76,87])
+        XCTAssertEqual(radixSort([]), [])
+        XCTAssertEqual(radixSort([100]), [100])
+        XCTAssertEqual(radixSort([1,9]), [1,9])
+    }
 }
