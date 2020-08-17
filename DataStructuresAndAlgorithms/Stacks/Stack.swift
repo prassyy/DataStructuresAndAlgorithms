@@ -13,17 +13,18 @@ class Stack<T> {
         case stackoverflow
     }
     
-    let MAX = 50
+    let capacity: Int
     var array: [T]
     var size: Int
     
-    init(defaultValue: T) {
-        self.array = Array<T>(repeating: defaultValue, count: MAX)
+    init(defaultValue: T, capacity: Int) {
+        self.array = Array<T>(repeating: defaultValue, count: capacity)
+        self.capacity = capacity
         self.size = 0
     }
     
     func push(value: T) throws {
-        if size >= MAX {
+        if size >= capacity {
             throw Exception.stackoverflow
         }
         array[size] = value

@@ -12,7 +12,7 @@ import XCTest
 class StackTests: XCTestCase {
 
     func testStackPush() throws {
-        let stack = Stack<Int>(defaultValue: 0)
+        let stack = Stack<Int>(defaultValue: 0, capacity: 50)
         XCTAssertEqual(stack.size, 0)
         try stack.push(value: 1)
         try stack.push(value: 2)
