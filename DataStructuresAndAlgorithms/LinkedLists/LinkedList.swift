@@ -64,4 +64,17 @@ class LinkedList {
         }
         return nil
     }
+    
+    func getNode(at i: Int) -> Node? {
+        var index = 0
+        var currentNode = head
+        while currentNode != nil {
+            if index == i {
+                return currentNode
+            }
+            index += 1
+            currentNode = currentNode?.next
+        }
+        return nil
+    }
 }

@@ -27,6 +27,8 @@
 		331E117024ECC7C70030F778 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E116F24ECC7C70030F778 /* Heap.swift */; };
 		331E117324F157BC0030F778 /* HeapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E117224F157BC0030F778 /* HeapTests.swift */; };
 		331E117524F159490030F778 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E117424F159490030F778 /* PriorityQueue.swift */; };
+		331E117724FB74A20030F778 /* BreakTheLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E117624FB74A20030F778 /* BreakTheLoop.swift */; };
+		331E117924FB74C30030F778 /* BreakTheLoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E117824FB74C30030F778 /* BreakTheLoopTests.swift */; };
 		338C21B824DFDC960083447A /* DataStructuresAndAlgorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338C21AE24DFDC960083447A /* DataStructuresAndAlgorithms.framework */; };
 		33A4058924E1AC99008706DA /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4058824E1AC99008706DA /* BubbleSort.swift */; };
 		33A4058D24E1ADDE008706DA /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4058B24E1ADD9008706DA /* ArrayTests.swift */; };
@@ -63,6 +65,8 @@
 		331E116F24ECC7C70030F778 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		331E117224F157BC0030F778 /* HeapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapTests.swift; sourceTree = "<group>"; };
 		331E117424F159490030F778 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		331E117624FB74A20030F778 /* BreakTheLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakTheLoop.swift; sourceTree = "<group>"; };
+		331E117824FB74C30030F778 /* BreakTheLoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakTheLoopTests.swift; sourceTree = "<group>"; };
 		338C21AE24DFDC960083447A /* DataStructuresAndAlgorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataStructuresAndAlgorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		338C21B224DFDC960083447A /* DataStructuresAndAlgorithms.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataStructuresAndAlgorithms.plist; sourceTree = "<group>"; };
 		338C21B724DFDC960083447A /* DataStructuresAndAlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructuresAndAlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				331E115B24E911650030F778 /* LinkedListTests.swift */,
+				331E117824FB74C30030F778 /* BreakTheLoopTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				331E115E24E9166B0030F778 /* LinkedList+Insertion.swift */,
 				331E116024E935F70030F778 /* LinkedList+Deletion.swift */,
 				331E116224E96F440030F778 /* LinkedList+Reverse.swift */,
+				331E117624FB74A20030F778 /* BreakTheLoop.swift */,
 			);
 			path = LinkedLists;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				331E114324E5AE710030F778 /* MergeSort.swift in Sources */,
 				33A4058924E1AC99008706DA /* BubbleSort.swift in Sources */,
 				331E117524F159490030F778 /* PriorityQueue.swift in Sources */,
+				331E117724FB74A20030F778 /* BreakTheLoop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				331E115D24E911840030F778 /* LinkedListTests.swift in Sources */,
+				331E117924FB74C30030F778 /* BreakTheLoopTests.swift in Sources */,
 				33A4058D24E1ADDE008706DA /* ArrayTests.swift in Sources */,
 				331E116824EA8C1A0030F778 /* StackTests.swift in Sources */,
 				331E116B24EAC0040030F778 /* QueueTests.swift in Sources */,

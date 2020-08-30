@@ -42,6 +42,6 @@ extension LinkedList {
 
 extension Node: Equatable {
     static func == (lhs: Node, rhs: Node) -> Bool {
-        return lhs.data == rhs.data && lhs.next == rhs.next
+        return lhs === rhs
     }
 }
