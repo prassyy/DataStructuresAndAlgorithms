@@ -48,4 +48,79 @@ class BinarySearchTreeTests: XCTestCase {
         bsTree.insert(data: 20)
         XCTAssertEqual(bsTree.findMax(), 20)
     }
+    
+    func testShouldFindTheCorrectHeightOfTree() {
+        let bsTree = BinarySearchTree<Int>()
+        bsTree.insert(data: 5)
+        bsTree.insert(data: 2)
+        bsTree.insert(data: 10)
+        bsTree.insert(data: 1)
+        bsTree.insert(data: 8)
+        bsTree.insert(data: 20)
+        XCTAssertEqual(bsTree.height(), 2)
+    }
+    
+    func testWhenTraversedPreOrderShouldTraverseInCorrectOrder() {
+        let bsTree = BinarySearchTree<Int>()
+        bsTree.insert(data: 5)
+        bsTree.insert(data: 2)
+        bsTree.insert(data: 10)
+        bsTree.insert(data: 1)
+        bsTree.insert(data: 8)
+        bsTree.insert(data: 20)
+        var order = [String]()
+        bsTree.traverseTree(order: .preorder) {
+            guard let node = $0 else { return }
+            order.append(String(node.data))
+        }
+        XCTAssertEqual(order.joined(separator: " "), "5 2 1 10 8 20")
+    }
+    
+    func testWhenTraversedInorderShouldTraverseInCorrectOrder() {
+        let bsTree = BinarySearchTree<Int>()
+        bsTree.insert(data: 5)
+        bsTree.insert(data: 2)
+        bsTree.insert(data: 10)
+        bsTree.insert(data: 1)
+        bsTree.insert(data: 8)
+        bsTree.insert(data: 20)
+        var order = [String]()
+        bsTree.traverseTree(order: .inorder) {
+            guard let node = $0 else { return }
+            order.append(String(node.data))
+        }
+        XCTAssertEqual(order.joined(separator: " "), "1 2 5 8 10 20")
+    }
+    
+    func testWhenTraversedPostorderShouldTraverseInCorrectOrder() {
+        let bsTree = BinarySearchTree<Int>()
+        bsTree.insert(data: 5)
+        bsTree.insert(data: 2)
+        bsTree.insert(data: 10)
+        bsTree.insert(data: 1)
+        bsTree.insert(data: 8)
+        bsTree.insert(data: 20)
+        var order = [String]()
+        bsTree.traverseTree(order: .postorder) {
+            guard let node = $0 else { return }
+            order.append(String(node.data))
+        }
+        XCTAssertEqual(order.joined(separator: " "), "1 2 8 20 10 5")
+    }
+    
+    func testWhenTraversedLevelorderShouldTraverseInCorrectOrder() {
+        let bsTree = BinarySearchTree<Int>()
+        bsTree.insert(data: 5)
+        bsTree.insert(data: 2)
+        bsTree.insert(data: 10)
+        bsTree.insert(data: 1)
+        bsTree.insert(data: 8)
+        bsTree.insert(data: 20)
+        var order = [String]()
+        bsTree.traverseTree(order: .levelorder) {
+            guard let node = $0 else { return }
+            order.append(String(node.data))
+        }
+        XCTAssertEqual(order.joined(separator: " "), "5 2 10 1 8 20")
+    }
 }

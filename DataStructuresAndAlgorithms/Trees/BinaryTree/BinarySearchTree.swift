@@ -70,4 +70,14 @@ class BinarySearchTree<T: Comparable> {
         guard let root = root else { return nil }
         return findMax(root: root.rightChild) ?? root.data
     }
+    
+    func height() -> Int {
+        return height(root: root)
+    }
+    
+    func height(root: BSNode<T>?) -> Int {
+        if root == nil { return -1 }
+        return max(height(root: root?.leftChild),
+                   height(root: root?.rightChild)) + 1
+    }
 }

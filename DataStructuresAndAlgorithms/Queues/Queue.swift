@@ -38,7 +38,7 @@ class Queue<T> {
         return item
     }
     
-    private func isEmpty() -> Bool { size == 0 }
+    func isEmpty() -> Bool { size == 0 }
     
-    private func isFull() -> Bool { size == capacity }
+    func isFull() -> Bool { size == capacity }
 }
