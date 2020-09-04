@@ -123,4 +123,51 @@ class BinarySearchTreeTests: XCTestCase {
         }
         XCTAssertEqual(order.joined(separator: " "), "5 2 10 1 8 20")
     }
+    
+    func testWhenDeletingALeafNodeShouldDeleteTheNode() {
+        let bsTree = BinarySearchTree<Int>()
+        bsTree.insert(data: 5)
+        bsTree.insert(data: 2)
+        bsTree.insert(data: 10)
+        bsTree.insert(data: 1)
+        bsTree.insert(data: 8)
+        bsTree.insert(data: 20)
+        bsTree.delete(data: 1)
+        XCTAssertEqual(bsTree.print(), [2, 5, 8, 10, 20])
+    }
+    
+    func testWhenDeleteingANodeWithOneChildShouldAppropriatelyRemoveNode() {
+        let bsTree = BinarySearchTree<Int>()
+        bsTree.insert(data: 5)
+        bsTree.insert(data: 2)
+        bsTree.insert(data: 10)
+        bsTree.insert(data: 1)
+        bsTree.insert(data: 8)
+        bsTree.insert(data: 20)
+        bsTree.delete(data: 2)
+        XCTAssertEqual(bsTree.print(), [1, 5, 8, 10, 20])
+    }
+    
+    func testWhenDeletingANodeWithBothChildrenShouldReplaceItWithRightChildNode() {
+        let bsTree = BinarySearchTree<Int>()
+        bsTree.insert(data: 5)
+        bsTree.insert(data: 2)
+        bsTree.insert(data: 10)
+        bsTree.insert(data: 1)
+        bsTree.insert(data: 8)
+        bsTree.insert(data: 20)
+        bsTree.delete(data: 8)
+        XCTAssertEqual(bsTree.print(), [1, 2, 5, 10, 20])
+    }
+}
+
+extension BinarySearchTree {
+    func print() -> [T] {
+        var output: [T] = []
+        traverseTree(order: .inorder) { node in
+            guard let node = node else { return }
+            output.append(node.data)
+        }
+        return output
+    }
 }
