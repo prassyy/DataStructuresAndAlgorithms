@@ -11,7 +11,7 @@ import XCTest
 
 class LinkedListTests: XCTestCase {
     func testLinkedListAdd() {
-        let list = LinkedList()
+        let list = LinkedList<Int>()
         list.append(data: 1)
         XCTAssertEqual(list.printList(), "1")
         XCTAssertEqual(list.length(), 1)
@@ -21,7 +21,7 @@ class LinkedListTests: XCTestCase {
     }
     
     func testLinkedListInsertion() {
-        let list = LinkedList()
+        let list = LinkedList<Int>()
         list.append(data: 1); list.append(data: 2); list.append(data: 3)
         XCTAssertEqual(list.printList(), "1 2 3")
         XCTAssertEqual(list.length(), 3)
@@ -34,7 +34,7 @@ class LinkedListTests: XCTestCase {
     }
     
     func testLinkedListPush() {
-        let list = LinkedList()
+        let list = LinkedList<Int>()
         list.append(data: 1); list.push(data: 2)
         XCTAssertEqual(list.printList(), "2 1")
         XCTAssertEqual(list.length(), 2)
@@ -47,7 +47,7 @@ class LinkedListTests: XCTestCase {
     }
     
     func testLinkedListDeletion() {
-        let list = LinkedList()
+        let list = LinkedList<Int>()
         list.append(data: 1); list.append(data: 2); list.append(data: 3)
         XCTAssertEqual(list.printList(), "1 2 3")
         XCTAssertEqual(list.length(), 3)
@@ -63,7 +63,7 @@ class LinkedListTests: XCTestCase {
     }
     
     func testLinkedListGetAtPosition() {
-        let list = LinkedList()
+        let list = LinkedList<Int>()
         list.append(data: 1); list.append(data: 2); list.append(data: 3)
         XCTAssertEqual(list.get(at: 0), 1)
         XCTAssertEqual(list.get(at: 1), 2)
@@ -72,7 +72,7 @@ class LinkedListTests: XCTestCase {
     }
     
     func testLinkedListReverse() {
-        let list = LinkedList()
+        let list = LinkedList<Int>()
         list.append(data: 1); list.append(data: 2); list.append(data: 3)
         XCTAssertEqual(list.printList(), "1 2 3")
         XCTAssertEqual(list.length(), 3)
@@ -82,12 +82,32 @@ class LinkedListTests: XCTestCase {
     }
     
     func testLinkedListReverseRecursively() {
-        let list = LinkedList()
+        let list = LinkedList<Int>()
         list.append(data: 1); list.append(data: 2); list.append(data: 3)
         XCTAssertEqual(list.printList(), "1 2 3")
         XCTAssertEqual(list.length(), 3)
         list.recursiveReverse()
         XCTAssertEqual(list.printList(), "3 2 1")
         XCTAssertEqual(list.length(), 3)
+    }
+}
+
+extension LinkedList {
+    func toArray() -> [T] {
+        var output: [T] = []
+        if var currentNode = head {
+            output.append(currentNode.data)
+            while let node = currentNode.next {
+                output.append(node.data)
+                currentNode = node
+            }
+        }
+        return output
+    }
+}
+
+extension LinkedList where T == Int {
+    func printList() -> String {
+        return self.toArray().map { String($0) }.joined(separator: " ")
     }
 }

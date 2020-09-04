@@ -9,7 +9,7 @@
 import Foundation
 
 extension LinkedList {
-    func insert(at position: Int, data: Int) {
+    func insert(at position: Int, data: T) {
         if position == 0 {
             push(data: data)
             return
@@ -30,7 +30,7 @@ extension LinkedList {
         }
     }
     
-    func push(data: Int) {
+    func push(data: T) {
         let node = Node(data: data)
         node.next = head
         head = node

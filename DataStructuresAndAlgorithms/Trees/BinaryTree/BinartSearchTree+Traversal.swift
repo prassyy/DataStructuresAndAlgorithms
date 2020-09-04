@@ -49,7 +49,7 @@ extension BinarySearchTree {
     
     func levelorder(root: BSNode<T>?, visit: (BSNode<T>?)->Void) {
         guard let root = root else { return }
-        let queue = Queue<BSNode>(defaultValue: root, capacity: 10)
+        let queue = Queue_WithCLL<BSNode<T>>()
         queue.enqueue(item: root)
         while !queue.isEmpty() {
             guard let nextItem = queue.dequeue()

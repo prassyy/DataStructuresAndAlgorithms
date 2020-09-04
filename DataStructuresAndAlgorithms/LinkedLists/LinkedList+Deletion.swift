@@ -9,7 +9,7 @@
 import Foundation
 
 extension LinkedList {
-    func delete(node: Node) {
+    func delete(node: Node<T>) {
         if node == head {
             head = head?.next
         } else {

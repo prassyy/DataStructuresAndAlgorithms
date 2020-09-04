@@ -10,7 +10,7 @@ import Foundation
 
 extension LinkedList {
     func reverse() {
-        var prev: Node? = nil
+        var prev: Node<T>? = nil
         var current: Node? = head
         while let currentNode = current {
             let next = currentNode.next
@@ -26,7 +26,7 @@ extension LinkedList {
         head = newHead
     }
     
-    func recursive(prev: Node?, current: Node?) -> Node? {
+    func recursive(prev: Node<T>?, current: Node<T>?) -> Node<T>? {
         if current == nil && current?.next == nil {
             return prev
         }

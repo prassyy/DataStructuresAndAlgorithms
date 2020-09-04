@@ -8,17 +8,17 @@
 
 import Foundation
 
-class Node {
-    let data: Int
+class Node<T> {
+    let data: T
     var next: Node?
     
-    init(data: Int) { self.data = data }
+    init(data: T) { self.data = data }
 }
 
-class LinkedList {
-    var head: Node?
+class LinkedList<T> {
+    var head: Node<T>?
     
-    func append(data: Int) {
+    func append(data: T) {
         let newNode = Node(data: data)
         if var lastNode = head {
             while let nextNode = lastNode.next {
@@ -28,18 +28,6 @@ class LinkedList {
         } else {
             head = newNode
         }
-    }
-    
-    func printList() -> String {
-        var output = ""
-        if var currentNode = head {
-            output = String(currentNode.data)
-            while let node = currentNode.next {
-                output += " " + String(node.data)
-                currentNode = node
-            }
-        }
-        return output
     }
     
     func length() -> Int {
@@ -52,7 +40,7 @@ class LinkedList {
         return count
     }
     
-    func get(at i: Int) -> Int? {
+    func get(at i: Int) -> T? {
         var index = 0
         var currentNode = head
         while currentNode != nil {
@@ -65,7 +53,7 @@ class LinkedList {
         return nil
     }
     
-    func getNode(at i: Int) -> Node? {
+    func getNode(at i: Int) -> Node<T>? {
         var index = 0
         var currentNode = head
         while currentNode != nil {

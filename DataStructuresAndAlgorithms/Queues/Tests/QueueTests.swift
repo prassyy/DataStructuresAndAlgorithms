@@ -17,7 +17,7 @@ class QueueTests: XCTestCase {
         queue.enqueue(item: 2)
         queue.enqueue(item: 3)
         queue.enqueue(item: 4)
-        queue.enqueue(item: 5)
+        queue.enqueue(item: 5) //Added beyond capacity
         XCTAssertEqual(queue.dequeue(), 1)
         XCTAssertEqual(queue.dequeue(), 2)
         XCTAssertEqual(queue.dequeue(), 3)

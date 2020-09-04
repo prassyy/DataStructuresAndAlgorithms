@@ -13,7 +13,7 @@ extension LinkedList {
         return nodeInLoop() != nil
     }
     
-    private func nodeInLoop() -> Node? {
+    private func nodeInLoop() -> Node<T>? {
         var slowPointer: Node? = head
         var fastPointer: Node? = head
         while slowPointer?.next != nil && fastPointer?.next != nil {

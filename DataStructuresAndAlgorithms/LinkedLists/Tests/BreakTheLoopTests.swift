@@ -13,7 +13,7 @@ import XCTest
 class BreakTheLoopTests: XCTestCase {
 
     func testWhenListHasLoopHasLoopShouldReturnTrue() {
-        let linkedList = LinkedList()
+        let linkedList = LinkedList<Int>()
         linkedList.append(data: 1)
         linkedList.append(data: 2)
         linkedList.append(data: 3)
@@ -27,7 +27,7 @@ class BreakTheLoopTests: XCTestCase {
     }
     
     func testWhenListHasNoLoopHasLoopShouldReturnFalse() {
-        let linkedList = LinkedList()
+        let linkedList = LinkedList<Int>()
         linkedList.append(data: 1)
         linkedList.append(data: 2)
         linkedList.append(data: 3)
@@ -38,7 +38,7 @@ class BreakTheLoopTests: XCTestCase {
     }
     
     func testWhenListHasLoopBreakLoopShouldBreakTheLoop1() {
-        let linkedList = LinkedList()
+        let linkedList = LinkedList<Int>()
         linkedList.append(data: 1)
         linkedList.append(data: 2)
         linkedList.append(data: 3)
@@ -55,7 +55,7 @@ class BreakTheLoopTests: XCTestCase {
     }
     
     func testWhenListHasLoopBreakLoopShouldBreakTheLoop2() {
-        let linkedList = LinkedList()
+        let linkedList = LinkedList<Int>()
         linkedList.append(data: 1)
         linkedList.append(data: 2)
         linkedList.append(data: 3)
@@ -70,3 +70,4 @@ class BreakTheLoopTests: XCTestCase {
         XCTAssertEqual(linkedList.printList(), "1 2 3 4 5 6")
     }
 }
+
