@@ -186,6 +186,22 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		331E118C25024AB70030F778 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				331E116E24ECC7B30030F778 /* Heaps */,
+				33A4058724E1ABAD008706DA /* HashTables */,
+				33A4058524DFF373008706DA /* Tries */,
+				33A4058624DFF37A008706DA /* Graphs */,
+				33A4058324DFF362008706DA /* Trees */,
+				33A4058224DFF35C008706DA /* Queues */,
+				33A4058124DFF355008706DA /* Stacks */,
+				33A4058024DFF347008706DA /* LinkedLists */,
+				33A4057F24DFF32E008706DA /* Arrays */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 		338C21A424DFDC960083447A = {
 			isa = PBXGroup;
 			children = (
@@ -206,17 +222,9 @@
 		338C21B024DFDC960083447A /* DataStructuresAndAlgorithms */ = {
 			isa = PBXGroup;
 			children = (
-				331E116E24ECC7B30030F778 /* Heaps */,
+				331E118C25024AB70030F778 /* DataStructures */,
 				331E114D24E7ED000030F778 /* DynamicProgramming */,
 				331E114C24E7ECF80030F778 /* Recursion */,
-				33A4058724E1ABAD008706DA /* HashTables */,
-				33A4058524DFF373008706DA /* Tries */,
-				33A4058624DFF37A008706DA /* Graphs */,
-				33A4058324DFF362008706DA /* Trees */,
-				33A4058224DFF35C008706DA /* Queues */,
-				33A4058124DFF355008706DA /* Stacks */,
-				33A4058024DFF347008706DA /* LinkedLists */,
-				33A4057F24DFF32E008706DA /* Arrays */,
 				338C21C824DFDF320083447A /* Configs */,
 			);
 			path = DataStructuresAndAlgorithms;
