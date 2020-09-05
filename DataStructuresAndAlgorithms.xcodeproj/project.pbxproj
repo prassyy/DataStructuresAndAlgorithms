@@ -89,6 +89,7 @@
 		338C21BE24DFDC960083447A /* DataStructuresAndAlgorithmsTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = DataStructuresAndAlgorithmsTests.plist; path = DataStructuresAndAlgorithms/Configs/DataStructuresAndAlgorithmsTests.plist; sourceTree = SOURCE_ROOT; };
 		33A4058824E1AC99008706DA /* BubbleSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 		33A4058B24E1ADD9008706DA /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
+		33A5F55225036D9C007AAAB7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +311,7 @@
 		33A4058624DFF37A008706DA /* Graphs */ = {
 			isa = PBXGroup;
 			children = (
+				33A5F55225036D9C007AAAB7 /* README.md */,
 			);
 			path = Graphs;
 			sourceTree = "<group>";
