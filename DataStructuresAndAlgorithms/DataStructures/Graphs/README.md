@@ -76,7 +76,7 @@ Acyclic graph: A graph with no cycle
 - Shortest path between two nodes (BFS(unweighted), Dijkstra, Bellman-Ford, Floyd-Warshall, A* etc.)
 - Connectivity. Exists a path between two nodes? (Union find data structure, Search using DFS/BFS) 
 - Does Weighted digraph has a negative cycle? Negative cycles can cause problems in finding the shortest path. One place for good usage of negative weights is that we can use it for Artibrage (Currency exchange between different currencies which will yield profit in the original currency) (Can use Bellman-Ford and Floyd-Warshall)
-- Find Strongly connected Components(SCCs) within the graph, cycles within directed graph where wach vertex in a cycle can reach every other vertex in the same cycle (It's usually an intermediate step in many algorithms) (Tarjan's algorithm, Kosaraju algorithm)
+- Find Strongly connected Components(SCCs) within the graph, cycles within directed graph where each vertex in a cycle can reach every other vertex in the same cycle (It's usually an intermediate step in many algorithms) (Tarjan's algorithm, Kosaraju algorithm)
 - Traveling Salesman Problem, A graph with cities and edges defined what is the path reaching all the cities once with least cost (Held-Karp - Dynamic programming, Branch and bound, Approximation algorithms like Ant-colony optimisation)
 - Find Bridges(Edges) in a graph. Bridges are usually vulnerabilities in a graph which when removed creates more Strongly connected components
 - Find Articulation points(Nodes) in a graph. Same as above
