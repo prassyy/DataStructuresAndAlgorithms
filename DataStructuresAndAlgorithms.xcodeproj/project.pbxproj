@@ -87,6 +87,8 @@
 		331E118A25021FB70030F778 /* QueueWithCLLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueWithCLLTests.swift; sourceTree = "<group>"; };
 		3388671D2529955A00099D06 /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
 		338867212529956B00099D06 /* AVLTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTreeTests.swift; sourceTree = "<group>"; };
+		3388672725317CF700099D06 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		33886728253181C100099D06 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		338C21AE24DFDC960083447A /* DataStructuresAndAlgorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataStructuresAndAlgorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		338C21B224DFDC960083447A /* DataStructuresAndAlgorithms.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataStructuresAndAlgorithms.plist; sourceTree = "<group>"; };
 		338C21B724DFDC960083447A /* DataStructuresAndAlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructuresAndAlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +269,7 @@
 				331E114824E7EC490030F778 /* RadixSort.swift */,
 				331E115024E814330030F778 /* Array+Extensions.swift */,
 				331E115324E8D9540030F778 /* CountingSort.swift */,
+				3388672725317CF700099D06 /* README.md */,
 			);
 			path = Arrays;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				331E116224E96F440030F778 /* LinkedList+Reverse.swift */,
 				331E117624FB74A20030F778 /* BreakTheLoop.swift */,
 				331E118424FF3C820030F778 /* CircularLinkedList.swift */,
+				33886728253181C100099D06 /* README.md */,
 			);
 			path = LinkedLists;
 			sourceTree = "<group>";
